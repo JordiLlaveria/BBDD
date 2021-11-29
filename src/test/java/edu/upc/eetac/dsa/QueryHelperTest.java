@@ -4,6 +4,7 @@ import edu.upc.eetac.dsa.model.Deparment;
 import edu.upc.eetac.dsa.model.Employee;
 import edu.upc.eetac.dsa.util.ObjectHelper;
 import edu.upc.eetac.dsa.util.QueryHelper;
+import jdk.nashorn.internal.runtime.regexp.JoniRegExp;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,7 +27,8 @@ public class QueryHelperTest {
     @Test
     public void testInsert(){
         Employee e = new Employee("Jordi", "Llaveria",500);
-        SessionImpl sess = null;
+        FactorySession s = new FactorySession();
+        Session sess = s.openSession();
         sess.save(e);
     }
     @Test
@@ -36,6 +38,7 @@ public class QueryHelperTest {
     }
     @Test
     public void testQueryINSERT() {
+
         Assert.assertEquals("INSERT INTO Employee (ID, name, surname, salary) VALUES (?, ?, ?, ?)",
                 QueryHelper.createQueryINSERT(new Employee("Juan", "lopez", 333333)));
     }
