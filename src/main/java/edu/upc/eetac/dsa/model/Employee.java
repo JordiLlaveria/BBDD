@@ -20,8 +20,10 @@ public class Employee {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+    public String getSurname() {return this.surname;}
 
     public void setSalary(double salary) {
         this.salary = salary;
     }
+    public double getSalary(){return this.salary;}
 }

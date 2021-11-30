@@ -26,7 +26,7 @@ public class QueryHelperTest {
     }
     @Test
     public void testInsert(){
-        Employee e = new Employee("Jordi", "Llaveria",500);
+        Employee e = new Employee("Joana", "Orpella",500);
         FactorySession s = new FactorySession();
         Session sess = s.openSession();
         sess.save(e);

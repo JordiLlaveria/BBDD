@@ -8,7 +8,6 @@ import java.sql.SQLException;
 public class FactorySession {
     public static Session openSession() {
 
-
         Connection conn = getConnection();
 
         Session session = new SessionImpl(conn);
@@ -21,8 +20,7 @@ public class FactorySession {
     private static Connection getConnection() {
         Connection conn = null;
         try {
-            //conn =DriverManager.getConnection("jdbc:mysql://localhost/test?" + "user=minty&password=greatsqldb");
-            conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/test","root","Jordi_mariadb");
+            conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/pokemon","root","Jordi_mariadb");
 
         } catch (SQLException ex) {
             // handle any errors
