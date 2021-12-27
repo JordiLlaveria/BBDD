@@ -12,6 +12,12 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Employee(){}
+    protected Employee clone()
+            throws CloneNotSupportedException{
+        return null;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -25,5 +31,6 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+    public void setSalary(Double salary){this.salary = salary;}
     public double getSalary(){return this.salary;}
 }

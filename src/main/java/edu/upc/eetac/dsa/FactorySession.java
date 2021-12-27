@@ -15,12 +15,10 @@ public class FactorySession {
         return session;
     }
 
-
-
     private static Connection getConnection() {
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/pokemon","root","Jordi_mariadb");
+            conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/employee","root","Jordi_mariadb");
 
         } catch (SQLException ex) {
             // handle any errors

@@ -37,7 +37,6 @@ public class ObjectHelper {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-
     }
 
     private static String getMethodName(String property){
